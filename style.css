@@ -1,0 +1,295 @@
+/* Fuentes externas utilizadas */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&family=Nunito&display=swap'); /* 'Noto Sans';'Nunito' */
+
+/* font-family: 'Noto Sans', sans-serif;
+font-family: 'Nunito', sans-serif; */
+
+/* Reset general de la página*/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+/* Comportamiento scroll en el html */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Establecimiento de pseudoclase root */
+
+:root {
+    /* Fuente primaria titulos */
+    --fuente-base: 'Noto Sans', sans-serif;
+    /* Fuente secundaria */
+    --fuente-sec: 'Nunito', sans-serif;
+    /* Colores */
+    --color-back: #DFF3E3;
+    --color-header: #F0F7F4;
+    --color-foot: #707070;
+    --color-fonts-border: #191516;
+    --color-cards-border: #444444;
+    --color-forms-items: #38B53E;
+    --color-red-adornos: #BA151B;
+}
+
+
+/* GRID PROPIEDADES INDEX */
+
+.grilla-contenedor {
+    display: grid;
+    grid-template-areas: 
+    'cabecera cabecera cabecera cabecera' 
+    'principal principal article article' 
+    'article-2 article-2 article-2 article-2' 
+    'pie pie pie pie'
+    ; 
+    grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(min(100px, 100%), 1fr));
+    gap: 30px;
+    background-color: var(--color-back);
+}
+/* 100px repeat(2, 1fr) 100px */
+
+.cabecera-contendor {
+    grid-area: cabecera;
+}
+
+.container-principal {
+    grid-area: principal;
+}
+
+.seccion-1 {
+    grid-area: article;
+}
+
+.seccion-2 {
+    grid-area: article-2;
+}
+
+footer {
+    grid-area: pie;
+}
+
+
+/* Estilos flex del header */
+
+.cabecera-contendor {
+    background-color: var(--color-header);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: fit-content;
+    position: sticky;
+    top: 0;
+    padding: 10px;
+    z-index: 10;
+}
+
+
+/* Estilos logo header */
+.logo-main {
+    display: block;
+    margin: 15px;
+    width: 150px;
+}
+
+/* Estilos barra navegación | header */
+
+.barra-navegacion ul li a {
+    font-family: var(--fuente-base);
+    color: var(--color-fonts-border);
+    background-color: var(--color-back);
+    font-size: medium;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+    font-weight: bolder;
+}
+
+/* Animaciones de la NAV BAR */
+
+.barra-navegacion ul li a:hover {
+
+    /* Cambia el cursos del mouse */
+    cursor: pointer;
+    border-bottom: 1px solid var(--color-cards-border);
+    background-color: var(--color-forms-items);
+    color: var(--color-header);
+    border-radius: 10px;
+}
+
+.barra-navegacion ul li a:active {
+    background-color: var(--color-foot);
+    color: var(--color-header);
+}
+
+/* Estilos container principal */
+
+.container-principal {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.logo-grande-farmacia{
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    width: 380px;
+}
+
+.container-principal h1 {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-forms-items);
+    font-family: var(--fuente-base);
+    color: var(--color-header);
+    margin-top: 0;
+    padding: 5px;
+    border-radius: 20px 10px;
+    box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+.seccion-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    margin: 5px;
+    background-color: var(--color-forms-items);
+    font-family: var(--fuente-sec);
+    border-radius: 30px;
+    box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+.seccion-1 h2 {
+    color: var(--color-back);
+    margin: 5px;
+    padding: 10px;
+    font-size: 40px;
+}
+
+.seccion-1 h2 span {
+    color: var(--color-red-adornos);
+}
+
+.seccion-1 p {
+    text-align: left;
+    font-size: large;
+    color: var(--color-back);
+}
+
+.seccion-1 p strong {
+    color: var(--color-red-adornos);
+}
+
+/* Estilos footer o Pie de página */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-cards-border);
+    width: 100%;
+    padding: 20px;
+}
+
+footer p {
+    color: var(--color-header);
+    font-family: var(--fuente-sec);
+    font-weight: bold;
+}
+
+
+/* Media query general grid LAYOUT MOBILE*/
+@media only screen and (max-width: 450px) {
+    
+    .grilla-contenedor {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
+        grid-template-areas: 
+        'cabecera'
+        'principal'
+        'article'
+        'article-2'
+        'pie';
+        gap: 15px;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+}
+
+/* Media query general grid LAYOUT TABLET*/
+@media only screen and (max-width: 680px) {
+    
+    .grilla-contenedor {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
+        grid-template-areas: 
+        'cabecera cabecera'
+        'principal principal'
+        'article article'
+        'article-2 article-2'
+        'pie pie';
+        gap: 15px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .seccion-2 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .logo-main {
+        width: 160px;
+    }
+}
+
+
+
+/* ESTILOS TESTIMONIOS */
+
+.contenedor-testimonios {
+        display: grid;
+        grid-template-areas: 
+        'cabecera cabecera cabecera cabecera' 
+        'main main main main'  
+        'pie pie pie pie'
+        ; 
+        grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
+        grid-template-rows: repeat(auto-fit, minmax(min(100px, 100%), 1fr));
+        gap: 30px;
+        background-color: var(--color-back);
+}
+
+
+.cabecera-contendor {
+    grid-area: cabecera;
+}
+
+.section-generales {
+    grid-area: main;
+}
+
+footer {
+    grid-area: pie;
+}
