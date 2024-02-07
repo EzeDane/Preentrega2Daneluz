@@ -37,7 +37,7 @@ html {
     --color-red-adornos: #BA151B;
 }
 
-
+/* INICIO ESTILOS HOJA INDEX.HTML */
 /* GRID PROPIEDADES INDEX */
 
 .grilla-contenedor {
@@ -263,21 +263,21 @@ footer p {
         width: 160px;
     }
 }
+/* FIN ESTILOS HOJA INDEX.HTML */
 
 
-
-/* ESTILOS TESTIMONIOS */
+/* INCIO ESTILOS HOJA TESTIMONIOS */
 
 .contenedor-testimonios {
         display: grid;
         grid-template-areas: 
         'cabecera cabecera cabecera cabecera' 
-        'main main main main'  
+        'articulo1 articulo1 video video' 
         'pie pie pie pie'
         ; 
-        grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
-        grid-template-rows: repeat(auto-fit, minmax(min(100px, 100%), 1fr));
-        gap: 30px;
+        grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
+        grid-template-rows: 150px repeat(auto-fit, minmax(min(350px, 100%), 1fr)) 100px;
+        gap: 90px;
         background-color: var(--color-back);
 }
 
@@ -286,10 +286,108 @@ footer p {
     grid-area: cabecera;
 }
 
-.section-generales {
-    grid-area: main;
+.opinion-container {
+    grid-area: articulo1;
+}
+.video-estilo {
+    grid-area: video;
 }
 
 footer {
     grid-area: pie;
 }
+
+/* Estilos contenido articulo */
+
+.opinion-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: #38B53E;
+    border-radius: 15px;
+    margin: 30px;
+    padding: 10px;
+    height: fit-content;
+    text-align: justify;
+    box-shadow: 2px 2px 2px 3px rgba(0, 0, 0.3, 0.2);
+}
+
+.opinion-container h2, .opinion-container p {
+    font-family: var(--fuente-sec);
+    color: var(--color-header);
+}
+
+/* Estilos video IFRAME */
+
+.video-estilo {
+    border-radius: 20px;
+    box-shadow: 3px 3px 4px 4px rgba(0, 0, 0.5, 0.2);
+    margin: 20px;
+}
+
+
+/* Media query para hoja testimonios FORMATO MOBILE */
+
+@media only screen and (max-width: 350px) {
+    .contenedor-testimonios {
+        display: grid;
+        grid-template-areas: 
+        'cabecera' 
+        'articulo1'
+        'video'
+        'video' 
+        'pie'; 
+        grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+        gap: 20px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .video-estilo {
+        width: 95%;
+        height: 350px;
+        margin: 10px;
+    }
+
+    .opinion-container {
+        width: fit-content;
+    }
+}
+
+/* Media query para hoja testimonios FORMATO TABLET */
+@media only screen and (max-width: 800px) {
+    .contenedor-testimonios {
+        display: grid;
+        grid-template-areas: 
+        'cabecera cabecera' 
+        'articulo1 articulo1'
+        'video video'
+        'video video'
+        'pie pie'; 
+        grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+        gap: 20px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .video-estilo {
+        width: 95%;
+        height: 350px;
+        margin: 20px;
+    }
+
+    .opinion-container {
+        width: fit-content;
+    }
+}
+
+/* FINAL ESTILOS HOJA TESTIMONIOS */
+
