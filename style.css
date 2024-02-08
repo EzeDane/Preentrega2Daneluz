@@ -557,3 +557,99 @@ grid-area: pie;
         border-radius: 20px;
     }
 }
+
+
+
+/* HOJA ESTILOS FORMULARIOS */
+
+/* Estilos para contacto - formulario */
+
+
+.contenedorcontacto {
+    display: grid;
+    grid-template-areas: 
+    'cabecera cabecera cabecera cabecera' 
+    'formulario formulario formulario formulario' 
+    'pie pie pie pie'
+    ; 
+    grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
+    grid-template-rows: 150px repeat(auto-fit, minmax(min(350px, 100%), 1fr)) 100px;
+    gap: 20px;
+    background-color: var(--color-back);
+}
+
+
+.cabecera-contendor {
+grid-area: cabecera;
+}
+
+.contenedorform {
+    grid-area: formulario;
+}
+
+footer {
+grid-area: pie;
+}
+
+
+.contenedorform {
+    position: relative;
+    padding: 30px;
+    margin: 10px 5px;
+    width: 600px;
+}
+
+.contenedorform h2 {
+
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    font-weight: 100px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+.formularioContacto {
+    font-family: 'Noto Sans', sans-serif;
+    text-align: center;
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    background-color: #38B53E;
+    border-radius: 70px 10px;
+
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin: 5px;
+}
+
+/* Inputs */
+
+input, 
+textarea {
+
+    width: 90%;
+    display: block;
+    padding: 10px 10px;
+    margin: 15px 20px;
+    border-radius: 20px 10px;
+    font-size: 16px;
+}
+
+/* Botones de formulario */
+
+.btnformulario {
+
+    background-color: #444444;
+    color: #F0F7F4;
+    border: none;
+    padding: 10px 20px;
+    font-size: large;
+    cursor: pointer;
+    margin-top: 10px;
+}
