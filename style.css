@@ -409,9 +409,99 @@ footer {
 
 /* INICIO ESTILOS HOJA PRODUCTOS */
 
+.carrusel-contenedor {
+    display: grid;
+    grid-template-areas: 
+    'cabecera cabecera cabecera cabecera' 
+    'carrusel carrusel carrusel carrusel' 
+    'pie pie pie pie'
+    ; 
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: 20px;
+}
 
-/* .card_container {
-    margin: 5px 20px 5px 5px;
-    width: 300px;
-    height: 500px;
-} */
+
+.productos-contenedor {
+grid-area: cabecera;
+}
+
+.carrusel-contenedor {
+grid-area: carrusel;
+}
+
+footer {
+grid-area: pie;
+}
+
+
+.carrusel-contenedor {
+    margin: 30px;
+    border-radius: 20px;
+}
+
+.detalles-fotos {
+    border: 3px solid var(--color-fonts-border);
+    border-radius: 20px;
+}
+
+/* Media query para MOBILE */
+@media only screen and (max-width: 450px) {
+
+    .carrusel-contenedor {
+        display: grid;
+        grid-template-areas: 
+        'cabecera' 
+        'carrusel'
+        'carrusel' 
+        'pie'; 
+        grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+        gap: 20px;
+    }
+
+    .carrusel-contenedor {
+        width: 85%;
+        height: 420px;
+        margin-top: 30px;
+    }
+
+    .detalles-fotos {
+        width: 100%;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+}
+
+/* Media query para TABLET */
+@media only screen and (max-width: 800px) {
+
+    .carrusel-contenedor {
+        display: grid;
+        grid-template-areas: 
+        'cabecera cabecera' 
+        'carrusel carrusel'
+        'carrusel carrusel' 
+        'pie pie'; 
+        grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+        gap: 30px;
+    }
+
+    .carrusel-contenedor {
+        width: 92%;
+        height: fit-content;
+    }
+
+    .detalles-fotos {
+        width: 100%;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+}
