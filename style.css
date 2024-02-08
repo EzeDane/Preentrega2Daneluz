@@ -231,6 +231,7 @@ footer p {
         display: flex;
         flex-direction: column;
         flex-grow: 1;
+        text-align: center;
     }
 
     .seccion-2 {
@@ -265,6 +266,7 @@ footer p {
         display: flex;
         flex-direction: column;
         flex-grow: 1;
+        text-align: center;
     }
 
     .seccion-2 {
@@ -361,6 +363,7 @@ footer {
         display: flex;
         flex-direction: column;
         flex-grow: 1;
+        text-align: center;
     }
 
     .video-estilo {
@@ -392,6 +395,7 @@ footer {
         display: flex;
         flex-direction: column;
         flex-grow: 1;
+        text-align: center;
     }
 
     .video-estilo {
@@ -418,7 +422,7 @@ footer {
     ; 
     grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
     grid-template-rows: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
-    gap: 20px;
+    gap: 15px;
 }
 
 
@@ -436,14 +440,39 @@ grid-area: pie;
 
 
 .carrusel-contenedor {
-    margin: 30px;
     border-radius: 20px;
+
 }
 
 .detalles-fotos {
     border: 3px solid var(--color-fonts-border);
     border-radius: 20px;
 }
+
+.slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 80%;
+    color: var(--color-header);
+    font-size: 20px;
+    margin: 10px;
+}
+
+.slide h5 {
+    font-size: 35px;
+    background-color: var(--color-foot);
+    border-radius: 20px;
+    padding: 0;
+}
+
+.slide p {
+    font-size: 20px;
+    background-color: var(--color-cards-border);
+    border-radius: 20px;
+}
+
 
 /* Media query para MOBILE */
 @media only screen and (max-width: 450px) {
@@ -466,14 +495,16 @@ grid-area: pie;
     }
 
     .detalles-fotos {
-        width: 100%;
+        width: 120%;
     }
 
     footer {
         display: flex;
         flex-direction: column;
+        text-align: center;
         flex-grow: 1;
     }
+
 }
 
 /* Media query para TABLET */
@@ -483,7 +514,6 @@ grid-area: pie;
         display: grid;
         grid-template-areas: 
         'cabecera cabecera' 
-        'carrusel carrusel'
         'carrusel carrusel' 
         'pie pie'; 
         grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
@@ -491,17 +521,39 @@ grid-area: pie;
     }
 
     .carrusel-contenedor {
-        width: 92%;
-        height: fit-content;
+        width: 95%;
+        height: max-content;
     }
 
     .detalles-fotos {
-        width: 100%;
+        width: 80%;
     }
 
     footer {
         display: flex;
         flex-direction: column;
         flex-grow: 1;
+        text-align: center;
+    }
+
+    .slide {
+        font-size: 30px;
+        margin: 10px;
+        display: flex;
+        align-items: flex-end;
+        height: 100%;
+    }
+    
+    .slide h5 {
+        font-size: 25px;
+        background-color: var(--color-foot);
+        border-radius: 20px;
+        padding: 0;
+    }
+    
+    .slide p {
+        font-size: 15px;
+        background-color: var(--color-cards-border);
+        border-radius: 20px;
     }
 }
