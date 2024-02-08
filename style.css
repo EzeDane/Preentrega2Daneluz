@@ -329,6 +329,10 @@ footer {
     color: var(--color-header);
 }
 
+.opinion-container h2 {
+    text-align: center;
+}
+
 /* Estilos video IFRAME */
 
 .video-estilo {
@@ -402,4 +406,7 @@ footer {
 }
 
 /* FINAL ESTILOS HOJA TESTIMONIOS */
+
+/* INICIO ESTILOS HOJA PRODUCTOS */
+
 
