@@ -614,10 +614,11 @@ grid-area: pie;
 
 
 .contenedorform {
-    position: relative;
-    padding: 30px;
-    margin: 10px 5px;
-    width: 600px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: fit-content;
+    padding: 10px;
 }
 
 .contenedorform h2 {
@@ -639,7 +640,7 @@ grid-area: pie;
     margin: 10px;
     padding: 10px;
     background-color: #38B53E;
-    border-radius: 70px 10px;
+    border-radius: 15px;
 
 }
 
@@ -654,11 +655,11 @@ label {
 input, 
 textarea {
 
-    width: 90%;
+    width: 100%;
     display: block;
     padding: 10px 10px;
     margin: 15px 20px;
-    border-radius: 20px 10px;
+    border-radius: 20px;
     font-size: 16px;
 }
 
@@ -671,6 +672,7 @@ textarea {
     border: none;
     padding: 10px 20px;
     font-size: large;
-    cursor: pointer;
-    margin-top: 10px;
+    margin-top: 15px;
+    padding: 10px;
+    width: fit-content;
 }
